@@ -21,7 +21,7 @@ module GemfileDiff
 
     def call
       specs.each_with_object({}) do |specification, hash|
-        hash[specification.name] = specification.version
+        hash[specification.name] = specification.version.to_s
       end
     end
 
