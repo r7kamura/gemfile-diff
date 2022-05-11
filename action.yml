@@ -1,0 +1,24 @@
+name: gemfile-diff
+description: Check difference of 2 Gemfile.lock.
+inputs:
+  gemfile_lock_a:
+    description: Path to Gemfile.lock.
+    required: true
+  gemfile_lock_b:
+    description: Path to Gemfile.lock.
+    required: true
+  ignore:
+    description:
+      Space-separated ignored gem names list.
+      Gem written here are ignored even if there are differences.
+    required: false
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - ${{ inputs.gemfile_lock_a }}
+    - ${{ inputs.gemfile_lock_b }}
+    - ${{ inputs.ignore }}
+branding:
+  color: red
+  icon: eye
