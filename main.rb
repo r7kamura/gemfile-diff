@@ -36,7 +36,7 @@ module GemfileDiff
     end
 
     def specs
-      parser.specs
+      bundler_lockfile_parser.specs
     end
   end
 
