@@ -2,6 +2,8 @@
 
 Custom action to check difference of 2 Gemfile.lock.
 
+If there is a difference, it outputs the ANSI-colored diff and terminates with exit code 1.
+
 ## Usage
 
 ```yaml
