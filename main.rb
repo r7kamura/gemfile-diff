@@ -108,7 +108,7 @@ end
 
 input = GemfileDiff::InputParser.call
 
-a = GemfileDiff::GemfileLockParser.call(input[:gemfile_lock_a]).except(input[:ignored_gem_names])
-b = GemfileDiff::GemfileLockParser.call(input[:gemfile_lock_b]).except(input[:ignored_gem_names])
+a = GemfileDiff::GemfileLockParser.call(path: input[:gemfile_lock_a]).except(input[:ignored_gem_names])
+b = GemfileDiff::GemfileLockParser.call(path: input[:gemfile_lock_b]).except(input[:ignored_gem_names])
 
-abort GemfileDiff::PrettyDiffGenerator.call(a, b) if a != b
+abort GemfileDiff::PrettyDiffGenerator.call(a: a, b: b) if a != b
