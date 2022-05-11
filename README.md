@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: r7kamura/gemfile-diff@main
+      - uses: r7kamura/gemfile-diff@v0
         with:
           gemfile_lock_a: Gemfile.lock
           gemfile_lock_b: Gemfile-rails-7-0.lock
