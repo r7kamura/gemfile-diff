@@ -99,8 +99,8 @@ module GemfileDiff
 
     def call
       ::Diffy::Diff.new(
-        a.to_yaml,
-        b.to_yaml
+        @a.to_yaml,
+        @b.to_yaml
       ).to_s(:color)
     end
   end
