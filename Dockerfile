@@ -8,6 +8,6 @@ ENV BUNDLE_WITHOUT development
 COPY Gemfile Gemfile.lock /app/
 RUN bundle install
 
-COPY main.rb /app/
+COPY entrypoint.sh main.rb /app/
 
 ENTRYPOINT ["/app/entrypoint.sh"]
