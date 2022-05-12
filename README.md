@@ -14,9 +14,19 @@ name: gemfile-diff
 
 on:
   pull_request:
+    paths:
+      - Gemfile
+      - Gemfile.lock
+      - Gemfile-7-0
+      - Gemfile-7-0.lock
   push:
     branches:
       - main
+    paths:
+      - Gemfile
+      - Gemfile.lock
+      - Gemfile-7-0
+      - Gemfile-7-0.lock
 
 jobs:
   run:
