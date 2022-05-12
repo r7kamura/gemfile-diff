@@ -28,14 +28,28 @@ jobs:
           gemfile_lock_a: Gemfile.lock
           gemfile_lock_b: Gemfile-rails-7-0.lock
           ignore:
+            actioncable
+            actionmailbox
             actionmailer
             actionpack
+            actiontext
             actionview
+            activejob
             activemodel
             activerecord
+            activestorage
             activesupport
+            digest
             globalid
+            io-wait
             mini_mime
+            net-imap
+            net-pop
+            net-protocol
+            net-smtp
             rails
             railties
+            scanf
+            strscan
+            timeout
 ```
