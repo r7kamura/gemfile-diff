@@ -6,6 +6,17 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+
 jobs:
-  run:
-    uses: r7kamura/workflows/.github/workflows/ruby-rubocop.yml@main
+  rubocop:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - uses: ruby/setup-ruby@v1.336.0
+        with:
+          bundler-cache: true
+      - run: bundle exec rubocop --parallel --format progress --format github
